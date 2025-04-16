@@ -1,0 +1,16 @@
+parameters:(This website is based only in Andhra Pradesh and telangana)
+1. User signup with his details(name,address,contact,email)
+2. user looks for the cars and bikes in a city(user first enters city)
+    note: if user enters location other than that of Andhrapradesh and telangana prompt/show a webpage that "we do not serve /rent in your location 
+     we currently serve only in Andhra Pradesh and telangana"
+3.user chooses a vehicle and then goes for booking..
+    in here user can see the availability status of that vehicle its prices per hour..
+    example: user wants to rent a car and he wants that car for only 4 hours..he should be able to know the price for 4 hours insted price of 1 day
+4. Billing..
+    when user finishes his selection prompt him to a card/account to make purchase(it is up to user if he wants to save his card details to his accout or not)
+    in case of upi payment(redirect to external payment api like stripe or paytm based on the api used in coding..)
+    generate the bill accordingly
+
+5. After confirmation of the payment..let the user know the pickup location of the vehicle the user chose(generate a random location in Andhra Pradesh and telangana based on the city user chose while booking the vehicle)
+    give an option to user to look for the location in google maps
+6. User must be able to see his bookings under my bookings tab(upcoming rentals,completed rentals,etc)

@@ -1,0 +1,130 @@
+/* Print styles for analytics dashboard */
+
+@media print {
+  /* Basic print reset */
+  @page {
+    size: auto;
+    margin: 1cm;
+  }
+
+  /* Hide elements that shouldn't be printed */
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Show elements that should only appear in print */
+  .print-header,
+  .hidden.print\:block {
+    display: block !important;
+  }
+
+  /* Make sure content is displayed properly */
+  .analytics-content {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Ensure charts display properly */
+  canvas {
+    max-width: 100% !important;
+    height: 400px !important;
+  }
+  
+  /* Page breaks */
+  .page-break-after {
+    page-break-after: always !important;
+  }
+  
+  .page-break-before {
+    page-break-before: always !important;
+  }
+  
+  /* Layout adjustments for grid */
+  .print-cols {
+    display: block !important;
+  }
+  
+  .print-cols > div {
+    width: 100% !important;
+    margin-bottom: 30px !important;
+    break-inside: avoid !important;
+  }
+  
+  /* Typography */
+  body {
+    font-size: 12pt !important;
+    color: #000 !important;
+    background-color: #fff !important;
+  }
+  
+  h1 {
+    font-size: 20pt !important;
+    margin-bottom: 15px !important;
+  }
+  
+  h2 {
+    font-size: 16pt !important;
+    margin-bottom: 10px !important;
+  }
+  
+  h3 {
+    font-size: 14pt !important;
+    margin-bottom: 8px !important;
+  }
+  
+  /* Chart containers */
+  .charts-container {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 30px !important;
+    /* Force minimum height to ensure charts render properly */
+    min-height: 400px !important;
+  }
+  
+  /* Chart height specific settings */
+  .h-64, .h-80 {
+    height: 400px !important;
+    min-height: 400px !important;
+  }
+
+  /* Summary styling */
+  .analytics-summary {
+    break-inside: avoid !important;
+    margin-top: 30px !important;
+    border: 1px solid #000 !important;
+    padding: 15px !important;
+  }
+  
+  .analytics-summary h3 {
+    margin-bottom: 15px !important;
+  }
+  
+  .analytics-summary p {
+    margin-bottom: 8px !important;
+    font-size: 12pt !important;
+  }
+  
+  /* Remove shadows and backgrounds */
+  .shadow-sm, .shadow-md, .shadow-lg {
+    box-shadow: none !important;
+  }
+  
+  /* Ensure icons don't print */
+  svg {
+    display: none !important;
+  }
+  
+  /* Fix table borders for printing */
+  table {
+    border-collapse: collapse !important;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd !important;
+  }
+  
+  /* Ensure page background is white */
+  html, body, div {
+    background-color: white !important;
+  }
+} 
